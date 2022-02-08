@@ -1,13 +1,21 @@
-function createStore() {
+import reducer from './reducer';
 
-    let state=1;
+function createStore(reducer) {
+
+    let state;
+
+    function dispatch(action){
+        state = reducer(state, action)
+    }
+
     function getState() {
         return state;
     }
 
     return {
+        dispatch,
         getState
     }
 }
 
-export default createStore();
+export default createStore(reducer);
