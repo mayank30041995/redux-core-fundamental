@@ -1,6 +1,10 @@
 import store from './customStore';
 import * as actions from './action';
 
+store.subscribe(() => {
+  console.log("store changed");
+})
+
 store.dispatch(actions.bugAdded("BUG 1"));
 
 console.log(store.getState()); 
