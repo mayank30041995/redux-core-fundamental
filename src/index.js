@@ -1,22 +1,34 @@
-import store from './customStore';
-import * as actions from './action';
+import store from './store';
+import { bugAdded , bugRemoved, bugResolved } from './action'
 
-store.subscribe(() => {
-  console.log("store changed");
-})
+ console.log(store.getState());
 
-store.dispatch(actions.bugAdded("BUG 1"));
+ store.dispatch(bugAdded('Bugsss'))
+ console.log(store.getState());
 
-console.log(store.getState()); 
+ store.dispatch(bugAdded('Bugsds'))
 
-store.dispatch(actions.bugAdded("BUG 5"));
+ console.log(store.getState());
+ store.dispatch(bugAdded('Bugsgs'))
+ 
+ console.log(store.getState());
 
-console.log(store.getState()); 
+//  store.dispatch(bugRemoved(1));
+//  console.log(store.getState());
 
-store.dispatch(actions.bugRemoved(1));
+ store.dispatch(bugResolved(1))
+ console.log(store.getState());
 
-console.log(store.getState());
+// store.dispatch({
+//   type: actions.BUG_ADDED,
+//   payload:{
+//     description:"bugs"
+//   }
+// })
+// console.log(store.getState());
 
-store.dispatch(actions.bugResolved(2));
-
-console.log(store.getState());
+// store.dispatch({
+//   type: actions.BUG_REMOVED,
+//   payload:{ id:1}
+// })
+// console.log(store.getState());
