@@ -7,7 +7,7 @@
     "start": "webpack-dev-server --config ./webpack.config.js"
   },
   "keywords": [],
-  "author": "Mosh Hamedani",
+  "author": "Mayank Sharma",
   "license": "ISC",
   "devDependencies": {
     "webpack": "4.41.6",
@@ -15,6 +15,7 @@
     "webpack-dev-server": "3.10.3"
   },
   "dependencies": {
-    "immer": "^9.0.12"
+    "immer": "^9.0.12",
+    "redux": "4.0"
   }
 }
