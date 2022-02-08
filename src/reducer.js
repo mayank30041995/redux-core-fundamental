@@ -12,5 +12,8 @@ switch (action.type) {
         }
     ]
 
+    case "bugRemoved" :
+        return [ state.filter( bug => bug.id !== action.payload.id)]
+
     default: return state;
 }}
