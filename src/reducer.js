@@ -11,4 +11,6 @@ switch (action.type) {
             resolved: false
         }
     ]
+
+    default: return state;
 }}
