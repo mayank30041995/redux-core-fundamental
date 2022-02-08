@@ -1,16 +1,16 @@
 import store from './store';
-import { bugAdded , bugRemoved } from './action'
+import { bugAdded , bugRemoved, bugResolved } from './action'
 
  console.log(store.getState());
 
  store.dispatch(bugAdded('Bugsss'))
-
  console.log(store.getState());
 
- store.dispatch(bugRemoved(1));
+//  store.dispatch(bugRemoved(1));
+//  console.log(store.getState());
 
+ store.dispatch(bugResolved(1))
  console.log(store.getState());
-
 
 // store.dispatch({
 //   type: actions.BUG_ADDED,
