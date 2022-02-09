@@ -6,22 +6,22 @@ const unsuscribe=store.subscribe(() => {
     console.log('store changed');
 })
 
- store.dispatch(action.bugAdded('Bugsss'))
+ store.dispatch(action.bugAdded({description:'Bugsss'}))
  console.log(store.getState());
 
- store.dispatch(action.bugAdded('Bugsds'))
+ store.dispatch(action.bugAdded({description:'Bugsds'}))
 
  console.log(store.getState());
- store.dispatch(action.bugAdded('Bugsgs'))
+ store.dispatch(action.bugAdded({description:'Bugsgs'}))
  
  console.log(store.getState());
 
-//  store.dispatch(bugRemoved(1));
-//  console.log(store.getState());
+ store.dispatch(action.bugRemoved({id: 1}));
+ console.log(store.getState());
 
-unsuscribe();
+// unsuscribe();
 
- store.dispatch(action.bugResolved(1))
+ store.dispatch(action.bugResolved({id: 2}))
  console.log(store.getState());
 
 // store.dispatch({
