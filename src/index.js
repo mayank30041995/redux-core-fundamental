@@ -1,4 +1,4 @@
-import store from './store/store';
+import store from './store/configureStore';
 import { bugAdded , bugRemoved, bugResolved } from './store/bugs'
 
  console.log(store.getState());
