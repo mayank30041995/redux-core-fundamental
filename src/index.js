@@ -1,5 +1,5 @@
-import store from './store';
-import { bugAdded , bugRemoved, bugResolved } from './action'
+import store from './store/store';
+import { bugAdded , bugRemoved, bugResolved } from './store/bugs'
 
  console.log(store.getState());
 
